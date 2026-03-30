@@ -20,6 +20,12 @@ const images = [
     {
         src:"RP2026_TABLES.png",
         alt:"Information about the tables that will be at Raizapalooza",
+        actions: [
+            {
+                link: "https://docs.google.com/forms/d/e/1FAIpQLScwEWw3GZn8_DnDSsX9lqUDoQ0npekcWzLsbymdpUjqO3OC_w/viewform?usp=header",
+                actionText: "Bake sale order sheet",
+            }
+        ],
     },
     {
         src:"RP2026_RETURNING.png",
@@ -36,7 +42,7 @@ const images = [
             {
                 link:"https://docs.google.com/forms/d/e/1FAIpQLSfSk6EaEF5fJqdmyRO7Scv0moBK304ZLtEsaMD_7LIIt2Lm8A/viewform?usp=dialog",
                 actionText: "Vendor Signup",
-            }
+            },
         ],
     },
 ]
