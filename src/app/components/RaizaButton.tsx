@@ -1,18 +1,19 @@
 import {ReactNode} from "react";
+import {InfoButton} from "@/app/types";
 
-export default function RaizaButton({action,text,children, className,link}:{action:({...args})=>void,text?:string,children?:ReactNode, className?:string,link?:string}) {
+export default function RaizaButton({action,children, className}:{action:InfoButton,children?:ReactNode, className?:string}) {
 
 
-    if(link){
+    if(action.link){
         return (
-            <a className={'mx-8 my-2'} href={link} >
-                <button onClick={action}
+            <a className={'mx-8 my-2'} href={action.link} >
+                <button
                         className={'w-full text-2xl bg-white border-raiza-green hover:border-raiza-light-green border-4 ' + className}>
                     {children ?
                         children
                         :
-                        (text ?
-                                text : "No hay resultado"
+                        (action.actionText ?
+                                action.actionText : "No hay resultado"
                         )
                     }
                 </button>
@@ -21,13 +22,13 @@ export default function RaizaButton({action,text,children, className,link}:{acti
     }
 
     return (
-        <button onClick={action}
+        <button onClick={action.action}
                 className={'mx-8 my-2 text-2xl bg-white border-raiza-green hover:border-raiza-light-green border-4 ' + className}>
             {children ?
                 children
                 :
-                (text ?
-                        text : "No hay resultado"
+                (action.actionText ?
+                        action.actionText : "No hay resultado"
                 )
             }
         </button>
