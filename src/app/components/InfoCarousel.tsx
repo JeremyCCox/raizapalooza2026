@@ -19,6 +19,12 @@ const images = [
     {
         src:"RP2026_INFO.png",
         alt:"Raizapalooza main information",
+        actions:[
+            {
+                link:"https://docs.google.com/forms/d/e/1FAIpQLSfoRcM9-74oSiY-hH5MCzUv4IUZA-TqsiBBCyRNO5dabWN5bQ/viewform?usp=dialog",
+                actionableText:"RSVP"
+            }
+        ],
         action:()=>{},
         link:"https://docs.google.com/forms/d/e/1FAIpQLSfoRcM9-74oSiY-hH5MCzUv4IUZA-TqsiBBCyRNO5dabWN5bQ/viewform?usp=dialog",
         actionableText:"RSVP"
@@ -34,6 +40,16 @@ const images = [
     {
         src:"RP2026_NEW.png",
         alt:"List of new Vendors that will be at Raizapalooza",
+        actions: [
+            {
+                action:()=>{console.log('fuck')},
+                actionableText:"Log FUCK"
+            },
+            {
+                link:"jcox.ca",
+                actionableText:"Go FUCK"
+            }
+        ],
         action:()=>{console.log('fuck')},
         actionableText:"Log FUCK"
     },
