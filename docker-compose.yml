@@ -1,0 +1,20 @@
+services:
+  jcox:
+    #    image: node:20-alpine
+    build: .
+    volumes:
+      - .:/app
+      - /app/.next
+      - /app/node_modules
+    expose:
+      - "3000"
+    environment:
+      - VIRTUAL_HOST=raizapalooza.ca
+      - LETSENCRYPT_HOST=raizapalooza.ca
+    networks:
+      - nginx
+#### Network setup for Nginx proxy ####
+networks:
+  nginx:
+    name: nginx
+    external: true
